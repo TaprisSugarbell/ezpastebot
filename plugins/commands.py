@@ -21,8 +21,8 @@ async def paste(_, m: Message):
     valid_input = reply and (reply.text or reply.document)
     if not valid_input:
         response = await m.reply_text(
-            "Reply to a text message/file with the command to "
-            "upload to [ezpaste](https://ezup.dev/p/)",
+            "Responder a un mensaje de texto/archivo con el comando de "
+            "subir a [ezpaste](https://ezup.dev/p/)",
             quote=True,
             disable_web_page_preview=True
         )
@@ -43,7 +43,7 @@ async def paste(_, m: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Share",
+                        "Compartir",
                         url=share_url
                     ),
                     InlineKeyboardButton(
@@ -62,24 +62,21 @@ async def paste(_, m: Message):
                    & ~filters.edited)
 async def start(_, m: Message):
     await m.reply_text(
-        f"{emoji.LABEL} **How to use this bot to upload paste to "
+        f"{emoji.LABEL} **Cómo utilizar este bot para subir el código a "
         "[ezpaste](https://ezup.dev/p)** "
-        "(any of the following methods works):\n\n"
-        "- Use in inline mode\n"
-        "- send text or text file in private\n"
-        "- reply to a text message or text file with /paste in private "
-        "or groups (feel free to add this bot to your groups, it has "
-        "privacy mode enabled so it does not read your chat history\n\n"
-        "You can upload up to 1 megabytes of text on each paste\n\n"
-        "[Source Code](https://github.com/dashezup/ezpastebot)"
-        " | [Developer](https://t.me/dashezup)"
-        " | [Support Chat](https://t.me/ezupdev)",
+        "(cualquiera de los siguientes métodos funciona):\n\n"
+        "- Usa en modo inline\n"
+        "- envia un texto o archivo de texto en privado\n"
+        "- responder a un mensaje de texto o a un archivo de texto con /paste en privado "
+        "o grupos (siéntase libre de añadir este bot a sus grupos, tiene "
+        "el modo de privacidad activado para que no lea tu historial de chat\n\n"
+        "Puedes cargar hasta 1 megabyte de texto en cada código\n\n",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Try inline",
+                        "Intenta inline",
                         switch_inline_query=""
                     )
                 ]

@@ -10,3 +10,6 @@ __pycache__/
 /*.session
 /*.session-journal
 /downloads/
+
+config.py
+.env

@@ -35,18 +35,18 @@ async def answer(_, iq: InlineQuery):
         await iq.answer(
             results=[
                 InlineQueryResultArticle(
-                    title="Send URL of this paste",
+                    title="Enviar URL de código",
                     input_message_content=InputTextMessageContent(
                         paste_info
                     ),
                     url=url,
-                    description="A paste on ezup.dev/p",
+                    description="Se subio a ezup.dev/p",
                     thumb_url=preview_image_url,
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
                                 InlineKeyboardButton(
-                                    "Share",
+                                    "Compartir",
                                     url=share_url
                                 ),
                                 InlineKeyboardButton(
@@ -67,7 +67,7 @@ async def answer(_, iq: InlineQuery):
                         [
                             [
                                 InlineKeyboardButton(
-                                    "Share",
+                                    "Compartir",
                                     url=share_url
                                 ),
                                 InlineKeyboardButton(
@@ -85,7 +85,7 @@ async def answer(_, iq: InlineQuery):
     await iq.answer(
         results=[],
         cache_time=1,
-        switch_pm_text="Send paste in PM",
+        switch_pm_text="Enviame código in PM",
         switch_pm_parameter="from_inline"
     )
 
@@ -111,7 +111,7 @@ async def reply_with_text(_, m: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Back to inline",
+                        "Regresa a inline",
                         switch_inline_query=url
                     )
                 ]
@@ -125,7 +125,7 @@ async def reply_with_text(_, m: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Share",
+                        "Compartir",
                         url=share_url
                     ),
                     InlineKeyboardButton(

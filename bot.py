@@ -1,6 +1,13 @@
 from pyrogram import Client, idle
+try:
+    from sample_config import Config
+except:
+    from config import Config
 
-app = Client("ezpastebot")
+api_id = Config.api_id
+api_hash = Config.api_hash
+Token = Config.Token
+app = Client("ezpastebot", api_id, api_hash, bot_token=Token)
 app.start()
 print('>>> BOT STARTED')
 idle()

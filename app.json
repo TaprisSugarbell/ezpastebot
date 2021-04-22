@@ -1,0 +1,37 @@
+{
+    "name": "Paztez",
+    "description": "Sube códigos a la nube...",
+    "logo": "https://i.imgur.com/S4Zlx0G.png",
+    "keywords": [
+        "Paztez",
+        "Bot",
+        "Telegram Bot",
+        "SayuOgiwara"
+    ],
+    "repository": "https://github.com/TaprisSugarbell/Bo.py",
+    "success_url": "https://telegram.dog/SayuCodez",
+    "env": {
+        "api_hash": {
+            "description": "Tu api_hash de my.telegram.org",
+            "value": ""
+        },
+        "Token": {
+            "description": "Tu Token de Telegram de @BotFather",
+            "value": ""
+        },
+        "api_id": {
+            "description": "Tu api_id de my.telegram.org",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [{
+        "url": "heroku/python"
+    }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}

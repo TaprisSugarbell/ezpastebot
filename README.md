@@ -16,6 +16,10 @@ venv/bin/pip install -U -r requirements.txt
 venv/bin/python bot.py
 ```
 
+## Deploying to [Heroku](https://heroku.com/)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TaprisSugarbell/ezpastebot)
+
 ## License
 
 AGPL-3.0-or-later

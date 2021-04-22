@@ -18,16 +18,16 @@ reply_filter = filters.create(lambda _, __, m: m.reply_to_message)
 )
 async def ask_to_paste(_, m: Message):
     await m.reply_text(
-        "Do you want to upload this paste?",
+        "¿Quieres subir este texto?",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Yes",
+                        "Si",
                         callback_data="yes_upload_paste"
                     ),
                     InlineKeyboardButton(
-                        "Ignore",
+                        "No",
                         callback_data="ignore_paste"
                     )
                 ]
@@ -53,7 +53,7 @@ async def upload_paste(_, cq: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "Share",
+                        "Compartir",
                         url=share_url
                     ),
                     InlineKeyboardButton(
