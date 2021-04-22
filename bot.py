@@ -1,8 +1,8 @@
 from pyrogram import Client, idle
 try:
-    from sample_config import Config
-except:
     from config import Config
+except:
+    from sample_config import Config
 
 api_id = Config.api_id
 api_hash = Config.api_hash
